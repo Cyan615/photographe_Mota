@@ -1,0 +1,27 @@
+// variables abstract folder
+
+@import 'abstract/variables';
+@import 'abstract/mixins';
+
+
+
+// base folder
+@import 'generic/normalize';
+@import 'generic/generic';
+@import 'generic/typography';
+@import 'generic/responsive';
+
+@import 'components/formulaire';
+@import 'components/button';
+
+// navigation folder
+@import 'layouts/navigation';
+@import 'layouts/banner';
+@import 'layouts/footer';
+@import 'layouts/modal';
+@import 'layouts/content-photo';
+@import 'layouts/gallery-photo';
+@import 'layouts/lightbox';
+
+@import 'pages/single-photographie';
+@import 'pages/home';

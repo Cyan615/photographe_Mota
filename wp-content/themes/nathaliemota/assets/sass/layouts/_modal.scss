@@ -1,0 +1,67 @@
+
+#contactModal{ 
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    overflow-y: auto;
+    opacity: 0;
+    transition: .3s;
+    &.show{
+        opacity: 1;
+    }
+}
+.modal-content{
+    position: relative;
+    margin: auto;
+    background-color: $white;
+    width: 42.6rem;
+    height: 54.9rem;
+    overflow-x: hidden;
+    max-width: calc(100vw - 30px);
+    max-height: calc(100vh - 30px);
+    
+    
+    &__closebtn{
+        position: absolute;
+        bottom: 2%;
+        right: 11%;
+        cursor: pointer;
+        border-radius: 50%;
+        
+        transition: 0.4s all ease-in-out;
+        width: 2rem;
+        height: 2rem;
+        background: radial-gradient(circle, $grey 27%, $red3 64%);
+    }
+    &__closebtn:hover{
+        
+        transform: scale(1.4) rotate(360deg);
+        background: $greyLight;
+        border: 2px solid $red;
+        
+    }
+    &__header{
+        background-image:  url("./../assets/images/Contact.png");
+        background-size: 22rem;
+        background-position-x: right;
+        height: 7.6rem;
+        width: 63.3rem;
+        margin-top: 1.3rem;
+    }
+    &__body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include font-form;
+    }
+    
+}
+
+.show .modal-content{
+    animation: animateModal  .2s 0.4s ease-in-out backwards;
+}

@@ -1,0 +1,38 @@
+@mixin font-form{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $darkBlue;
+    text-transform: uppercase;
+    padding: 1rem 0;
+}
+
+@mixin border-form{
+    border: 1px solid $grey;
+    border-radius: 8px;
+}
+@mixin margin-form{
+    margin-top: 0.1rem;
+    margin-bottom: 0.8rem;
+}
+@keyframes animateModal {
+    0%{
+        transform: translateY(-120vh);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes animate {
+    0%{
+        transform: translateY(-120vh);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

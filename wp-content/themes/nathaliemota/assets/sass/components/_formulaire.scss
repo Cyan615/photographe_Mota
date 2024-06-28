@@ -1,0 +1,37 @@
+.wpcf7{
+    max-width: $width-form-input;
+}
+.fontLabel{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $darkBlue;
+}
+.input-design{
+    width: 100%;
+    height: 2.9rem;
+    @include border-form;
+    @include margin-form;
+}
+.textarea-design{
+    width: 100%;
+    height: 15rem;
+    @include border-form;
+    @include margin-form;
+}
+.wpcf7-submit{
+    width: 100%;
+    height: 3.6rem;
+    border-radius: 2px;
+    Padding: 8px 15px;
+    background-color: $greyMedium;
+    border:none;
+    font-family: 'Space-mona';
+    font-weight: 400;
+    color: $text-Color;
+    cursor: pointer;
+    &:hover{
+        border: 3px solid $greyDark;
+        font-weight: bold;
+    }
+}

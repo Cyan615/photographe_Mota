@@ -1,0 +1,101 @@
+.main-photo{
+    margin: 6vw;
+}
+// Zone de contenu
+.single-postPhoto{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    &__photoInRight{  // Block photo à droite
+        width: $width-block-2col;
+        max-height: 144.6vh;
+        padding-left: 0.8rem;
+        
+    }
+    &__contactPhoto{   //Block de contacte du dessous
+        display: flex;
+        
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: $parting-line-thickness solid $text-Color;
+        min-height: 13vh;
+        & .rightpart{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+        }
+        p{
+            font-size: 14px;
+            margin: 2rem 0;
+        }
+    }
+}
+// navigation post précédent et suivant
+.photo-navigation{
+    display: flex;
+    position: relative;
+    margin: 0.3rem 0;
+    padding-top: 5rem;
+    & #prev-miniature{
+        z-index: 2;
+    }
+    &__next-post:hover .hide-miniature{
+        transform: scale(1);
+    }
+    &__prev-post:hover .hide-miniature{
+        transform: scale(1);
+    }
+}
+.miniatureSize {
+    width: 81px;
+    height: 71px;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0.5rem;
+}
+.hide-miniature{
+    transition: 0.2s;
+    transform: scale(0);
+}
+
+
+// Block info sur la gauche
+.left-blockInfo{
+    width: $width-block-2col;
+    &__title{
+        font-size: 4.71rem;
+        line-height: 4.14rem;
+        width: 25vw;
+    }
+    &__ref{
+        font-family: 'Space-mono';
+        font-size: 1rem;
+        line-height: 1.48rem;
+        letter-spacing: 10%;
+        text-transform: uppercase;
+    }
+    &--line{
+        border-top: $parting-line-thickness solid $text-Color;
+        width: 100%;
+        display: block;
+        margin-right: 0.2rem;
+        margin-top: 1.8rem;
+    }
+}
+
+// Block photo apparentées
+.relatedPicture{
+    margin-top: 7vh;
+    &__gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2rem;
+        margin-top: 4vh;
+        
+    }
+}
+
+
