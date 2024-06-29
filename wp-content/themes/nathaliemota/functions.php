@@ -32,10 +32,10 @@ function mota_register_menu(){
 // script css et JS
 function mota_register_scripts(){
     // Déclarer le js
-    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_script('lightbox_js', get_template_directory_uri() . '/assets/js/lightbox.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('modal', get_template_directory_uri() . '/assets/js/modal.js', array('jquery'), '1.0.0', true);
+    // wp_enqueue_script('lightbox_js', get_template_directory_uri() . '/assets/js/lightbox.js', array('jquery'), '1.0.0', true);
 
-    wp_enqueue_script('filters', get_template_directory_uri() . '/assets/js/filters.js', array('jquery'), '1.0.0', true);
+    // wp_enqueue_script('filters', get_template_directory_uri() . '/assets/js/filters.js', array('jquery'), '1.0.0', true);
 
     // url pour requète Ajax
     $url = admin_url('admin-ajax.php');
@@ -47,19 +47,17 @@ function mota_register_scripts(){
 
     // Déclarer le css compilé sass
     wp_enqueue_style('theme_style', get_template_directory_uri() . '/css/style.css');
-    
-   
 }
 
 // affichage du lien 'Contact' dans le menu header
 function contact_modal_add($items){
     
-        $contactItemMenu = '<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-20">
-        <a href="'.get_site_url().'/wp-content/theme/themenathaliemota/templates-part/modalcontact.php/"  aria-current="page" itemprop="url">contact</a></li>';
-        
-        $items .= $contactItemMenu;
+    $contactItemMenu = '<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-20">
+    <a href="'.get_site_url().'/wp-content/theme/themenathaliemota/template-part/modalcontact.php/"  aria-current="page" itemprop="url">contact</a></li>';
     
-    return $items;
+    $items .= $contactItemMenu;
+
+return $items;
 };
 
 // ******* ACTION *******
@@ -69,6 +67,12 @@ add_action('wp_enqueue_scripts', 'mota_register_scripts');
 add_filter('wp_nav_menu_items', 'contact_modal_add', 10, 2);
 
 
+/**
+ * * Gallery query
+ * 
+ */
+
+ require get_template_directory() . '/template-part/gallery-query.php';
 
 
 

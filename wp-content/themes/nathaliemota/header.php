@@ -32,9 +32,6 @@
         <!-- bouton ouverture/fermeture menu burger -->
             <div id="icones"></div>
         </nav>
-
-        
-
     </header>
 
     

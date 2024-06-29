@@ -6,13 +6,13 @@
                     'container' => 'ul',
                     'menu_class' => 'footerNav__menu'
                 ));  ?>
-  
+            <p class="droits">Tous droits réservés</p>
         </nav>
 <!-- accroche de la modale de contacte -->
-    <?php get_template_part('templates-part/modalcontact'); ?>  
+    <?php get_template_part('template-part/modalcontact'); ?>  
 
 <!-- accroche de la lightbox -->
-    <?php get_template_part('templates-part/lightbox-modal'); ?>           
+    <?php get_template_part('template-part/lightbox'); ?>           
 
     <?php wp_footer();  ?>
 
