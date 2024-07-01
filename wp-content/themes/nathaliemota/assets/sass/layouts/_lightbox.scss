@@ -1,0 +1,87 @@
+#boxContainer-overlay{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    
+}   
+#boxContainer-overlay.show{
+    z-index: 9;
+    opacity: 1;
+    
+}
+.box-content{
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    & button{
+        border: none ;
+        background-color: transparent;
+        @include btnOpacity;
+    }
+    & button:hover{
+        opacity: 1;
+    }
+    & .box__closeBtn{
+        background: url("../assets/images/close-icon.svg");
+        width: 23px;
+        height: 23px;
+        background-repeat: no-repeat;
+        top: 9vh;
+        right: 4vw;
+        position: absolute;
+        transition: all .3s ease-in-out;
+        &:hover{
+            transform: rotate(360deg) scale(1.2);
+        }
+    }
+    & .box__prevArrow, .box__nextArrow{
+        color: $white;
+        display: flex;
+        position: fixed;
+        bottom: 10vh;
+        & .arrowImg{
+            padding: 0.5rem;
+            width: 20px;
+        }
+    }
+    & .box__nextArrow{
+        right:6vw;
+    }
+    
+    
+    
+}
+.blockPhoto{
+    position: relative;
+    margin: auto;
+    
+    & .img-container{
+        padding: 0 2vw;
+        overflow: auto;
+        max-width: 80vw;
+        max-height: 70vh;
+        margin: auto;
+    }
+    
+    & .infoPhoto{
+        display: flex;
+        justify-content: space-between;
+        & span{
+            color: $white;
+            position: absolute;
+            padding: 2vh 2vw;
+        }
+        & .box__refPhoto{
+            right: 0;
+        }
+    }
+}

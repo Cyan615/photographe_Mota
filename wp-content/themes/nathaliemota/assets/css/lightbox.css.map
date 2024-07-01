@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"lightbox.css"}
+{"version":3,"sources":["../sass/layouts/lightbox.scss","lightbox.css"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,eAAA;EACA,MAAA;EACA,OAAA;EACA,WAAA;EACA,YAAA;EACA,oCAAA;EACA,UAAA;ACCJ","file":"lightbox.css"}

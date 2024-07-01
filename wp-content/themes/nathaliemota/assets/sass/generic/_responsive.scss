@@ -66,4 +66,25 @@
         }
     } 
 }
-
+// Lightbox
+@media (min-width: 700px) {
+    .img-container{
+        max-width: 57vw !important;
+    }
+    .box__prevArrow, .box__nextArrow {
+        bottom: 50% !important;
+    }
+}
+// Footer
+@media (max-width: $bpMobile){
+    .footerNav{
+        width: 100vw;
+        height: 14.86rem;
+        &__menu{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+    }
+}

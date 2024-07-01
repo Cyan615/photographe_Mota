@@ -6,7 +6,7 @@
                     'container' => 'ul',
                     'menu_class' => 'footerNav__menu'
                 ));  ?>
-            <p class="droits">Tous droits réservés</p>
+            
         </nav>
 <!-- accroche de la modale de contacte -->
     <?php get_template_part('template-part/modalcontact'); ?>  

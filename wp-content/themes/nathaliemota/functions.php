@@ -33,7 +33,7 @@ function mota_register_menu(){
 function mota_register_scripts(){
     // Déclarer le js
     wp_enqueue_script('modal', get_template_directory_uri() . '/assets/js/modal.js', array('jquery'), '1.0.0', true);
-    // wp_enqueue_script('lightbox_js', get_template_directory_uri() . '/assets/js/lightbox.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('lightbox', get_template_directory_uri() . '/assets/js/lightbox.js', array('jquery'), '1.0.0', true);
 
     // wp_enqueue_script('filters', get_template_directory_uri() . '/assets/js/filters.js', array('jquery'), '1.0.0', true);
 
@@ -60,11 +60,18 @@ function contact_modal_add($items){
 return $items;
 };
 
+function footer_item_add($items, $addr){
+    if ($addr-> theme_location === 'footer'){
+        $items .= '<li class="mention">Tous droits réservés</li>';
+    }
+    return $items;
+}
 // ******* ACTION *******
 add_action('after_setup_theme', 'mota_setup');
 add_action( 'init', 'mota_register_menu' );
 add_action('wp_enqueue_scripts', 'mota_register_scripts');
 add_filter('wp_nav_menu_items', 'contact_modal_add', 10, 2);
+add_filter('wp_nav_menu_items', 'footer_item_add', 10, 2);
 
 
 /**
