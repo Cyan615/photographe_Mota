@@ -8,7 +8,7 @@ const close = document.querySelector('.box__closeBtn');
 // ** le bouton 'pleine écran' de chaque photo ->
 const fullscreens = document.querySelectorAll('.iconfullscreen');
 // *** Chargement de l'image sélectionné ***
-// ** on cherche l'élément qui contient les data-information ->
+
 
 
 const imgBox = overlay.querySelector('.lightbox__image');
@@ -49,10 +49,11 @@ close.addEventListener("click", function(){
 const prevArrow = overlay.querySelector('.box__prevArrow');
 const nextArrow = overlay.querySelector('.box__nextArrow');
 
-// initialise le tableau galeryPhoto , onrécupère les URLs des photos de fullscreens ->
-const dataElements = document.querySelectorAll('.frame-Overlay__fullscreen');
+// initialise le tableau galeryPhoto , 
 let galeryPhoto = [];
-
+// ** on cherche l'élément qui contient les data-information ->
+const dataElements = document.querySelectorAll('.frame-Overlay__fullscreen');
+// on récupère les URLs des photos  ->
 dataElements.forEach(dataElement => {
     let imgUrl = dataElement.getAttribute('data-photoUrl');
     galeryPhoto.push(imgUrl);
@@ -68,8 +69,6 @@ function showphotoprev(prevImgUrl, prevImgCategorie, prevImgReference, currentin
  overlay.querySelector('.box__catPhoto').textContent= prevImgCategorie;
  overlay.querySelector('.box__refPhoto').textContent= prevImgReference;
 }
-
-
 
 // ecoute des flèches
 prevArrow.addEventListener("click", function() {
@@ -104,7 +103,7 @@ nextArrow.addEventListener("click", function() {
     showphotonext(nextImgUrl, nextImgCategorie, nextImgReference, currentindex);
 });
 
-}
+};
 
 
 

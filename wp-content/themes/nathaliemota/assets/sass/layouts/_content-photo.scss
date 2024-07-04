@@ -1,7 +1,7 @@
 .photoCard{
-    position: relative;
-    width: calc(28.5rem + 9vw);
-    height: calc(26.1rem + 9vh) ;  //35.36rem
+    
+    width: calc(28rem + 9vw);
+    height: calc(31.4rem + 9vh) ;  //35.36rem
     &:hover{
         .frame-Overlay{
             display: flex;

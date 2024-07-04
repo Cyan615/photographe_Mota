@@ -2,18 +2,22 @@
     display: flex;
     flex-direction: column;
     //gap: 3rem;
-    margin: 3rem auto;
+    margin: 3rem;
     // width: 100%;
-    & .column-gallery{
+    & article{
         margin: auto;
+        width: 85%;
     }
+    // & .column-gallery{
+        
+    // }
     &__filters{
         display: flex;
         margin: 3rem auto;
         flex-wrap: wrap;
         gap: 2rem;
         justify-content: space-between;
-        width: 87%;
+        width: 100%;  //85vw
         & .col1{
             display: flex;
             flex-wrap: wrap;

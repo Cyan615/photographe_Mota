@@ -332,9 +332,9 @@ body {
 }
 
 a {
-  font-size: 1rem;
+  font-size: 16px;
   font-family: "Space-mono";
-  line-height: 1.48rem;
+  line-height: 1.69rem;
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
@@ -486,6 +486,11 @@ button:hover {
     margin: auto;
   }
 }
+@media all and (min-width: 1041px) and (max-width: 1250px) {
+  #galleryPhoto {
+    width: 100% !important;
+  }
+}
 @media (max-width: 1040px) {
   .photoCard {
     width: calc(18rem + 14vw) !important;
@@ -536,12 +541,12 @@ button:hover {
 @media (max-width: 799px) {
   .footerNav {
     width: 100vw;
-    height: 14.86rem;
+    height: 14.86rem !important;
   }
   .footerNav__menu {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3.43rem !important;
   }
 }
 .wpcf7 {
@@ -629,6 +634,7 @@ button:hover {
 .navbar__logo {
   padding: 0 7vw;
   align-content: center;
+  width: 12vw;
 }
 .navbar__menu {
   margin-right: 7vw;
@@ -719,14 +725,14 @@ button:hover {
   }
 }
 .footer {
-  height: 3rem;
   border-top: 1px solid #000000;
 }
 
 .footerNav {
-  height: 100%;
+  height: 2.86rem;
 }
 .footerNav__menu {
+  padding: 0;
   height: 100%;
   justify-content: center;
   align-items: center;
@@ -810,9 +816,8 @@ button:hover {
 }
 
 .photoCard {
-  position: relative;
-  width: calc(28.5rem + 9vw);
-  height: calc(26.1rem + 9vh);
+  width: calc(28rem + 9vw);
+  height: calc(31.4rem + 9vh);
 }
 .photoCard:hover .frame-Overlay {
   display: flex;
@@ -871,8 +876,8 @@ button:hover {
 .column-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 3rem;
-  grid-row-gap: 3rem;
+  grid-column-gap: 1vw;
+  grid-row-gap: 2vh;
 }
 
 #boxContainer-overlay {
@@ -942,7 +947,6 @@ button:hover {
 }
 .blockPhoto .img-container {
   padding: 0 2vw;
-  overflow: auto;
   max-width: 80vw;
   max-height: 70vh;
   margin: auto;
@@ -1059,10 +1063,11 @@ button:hover {
 .catalogPhoto {
   display: flex;
   flex-direction: column;
-  margin: 3rem auto;
+  margin: 3rem;
 }
-.catalogPhoto .column-gallery {
+.catalogPhoto article {
   margin: auto;
+  width: 85%;
 }
 .catalogPhoto__filters {
   display: flex;
@@ -1070,7 +1075,7 @@ button:hover {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-between;
-  width: 87%;
+  width: 100%;
 }
 .catalogPhoto__filters .col1 {
   display: flex;

@@ -3,7 +3,7 @@
 	<div class="col1">
         <!-- Filtre par cathegorie -->
         <select class="filter" name="filterCategorie"  id="filterCategorie">  
-            <option id="allCategory" value="all">categorie</option>
+            <option id="allCategory" value="allCat">categorie</option>
             <?php
             $terms = get_terms('categorie'); ?>
             <?php foreach ($terms as $term) :
@@ -15,7 +15,7 @@
         <!-- Filtre par format -->
         
         <select class="filter"  name="filterFormat"  id="filterFormat">
-            <option id="allFormat" value="all">format</option>    
+            <option id="allFormat" value="allFor">format</option>    
             <?php  
             $terms = get_terms('format');
             foreach ($terms as $term) :

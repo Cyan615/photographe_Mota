@@ -1,3 +1,5 @@
+
+//home
 @media (max-width: $bpMobile) {
     .catalogPhoto{
         width: 100vw;
@@ -22,6 +24,12 @@
         margin: auto;
     }
 }
+@media all and (min-width: 1041px) and (max-width: 1250px ){
+    #galleryPhoto{
+    width: 100% !important;
+       
+    }
+}
 @media (max-width: $bpMedium){
     .photoCard{
         width: calc(18rem + 14vw) !important;
@@ -34,6 +42,8 @@
         height: 19.91rem;        
     }
 }
+
+//single-photographie
 @media (max-width: $bpSmall) {
     .left-blockInfo, .single-postPhoto__photoInRight{
         width: 80% !important;
@@ -79,11 +89,11 @@
 @media (max-width: $bpMobile){
     .footerNav{
         width: 100vw;
-        height: 14.86rem;
+        height: 14.86rem !important;
         &__menu{
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 3.43rem !important;
         }
         
     }
