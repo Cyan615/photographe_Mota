@@ -57,9 +57,11 @@
     }
     .active .navbar__menu{
         right: 0;
+        padding: 0;
         // z-index: 3;
     }
     .navbar{
+        position: relative;
         flex-direction: column;
         width: 100vw;
         align-content: end;

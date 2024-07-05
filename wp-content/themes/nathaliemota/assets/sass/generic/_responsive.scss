@@ -2,7 +2,7 @@
 //home
 @media (max-width: $bpMobile) {
     .catalogPhoto{
-        width: 100vw;
+        
         & .column-gallery{
             display: flex;
             flex-flow: column;
@@ -38,8 +38,8 @@
 }
 @media (max-width: $bpMobile){
     .photoCard{
-        width: 22.69rem;
-        height: 19.91rem;        
+        width: 22.69rem !important;
+        height: 19.91rem !important;        
     }
 }
 
@@ -55,9 +55,7 @@
     .single-postPhoto__photoInRight{
         order: -1;
     }
-    // .left-blockInfo--line{
-    //     margin-left: 0 !important;
-    // }
+    
     .photo-navigation{
         display: none !important;
     }
@@ -76,6 +74,17 @@
         }
     } 
 }
+@media all and (max-width: $bpMobile){
+    .left-blockInfo{
+        width: 47% !important;
+    }
+}
+// Image mise en avant
+@media all and (max-width: $bpMobile){
+    .singlePhoto-content{
+        height: 28.4rem !important;
+    }
+}
 // Lightbox
 @media (min-width: 700px) {
     .img-container{
@@ -83,6 +92,15 @@
     }
     .box__prevArrow, .box__nextArrow {
         bottom: 50% !important;
+    }
+}
+@media all and (max-width: $bpMobile){
+    .img-container{
+        width: auto !important;
+        height: auto !important;
+    }
+    .box__nextArrow, .box__prevArrow{
+        bottom: 6% !important;
     }
 }
 // Footer
@@ -96,5 +114,13 @@
             gap: 3.43rem !important;
         }
         
+    }
+}
+
+// Modale contact
+@media all and (max-width: $bpMobile) {
+    .modal-content__closebtn{
+        bottom: -25% !important;
+        right: 45% !important;
     }
 }

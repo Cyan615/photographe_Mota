@@ -56,7 +56,10 @@
 			<?php $photo_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);  ?>
 	<!-- Afficher la photographie -->
 			<aside class="single-postPhoto__photoInRight" >
-				<img src="<?php the_post_thumbnail_url();  ?>" alt="<?php echo $photo_alt; ?>">
+				<div class="singlePhoto-content">
+					<img src="<?php the_post_thumbnail_url();  ?>" alt="<?php echo $photo_alt; ?>">
+				</div>
+				
 				
 			</aside>
 			<!-- bloque navigation photo et contacte -->
@@ -75,7 +78,7 @@
 						<?php
     			        if ( ! empty( $prev_post ) ) : ?>
     			        <a href="<?php echo get_permalink( $prev_post ); ?>">
-    			        <img class="arrow arrowLeft"src="<?= get_template_directory_uri(); ?>/		assets/	images/fléche-avant.svg" alt="fléche précédente" ></a>
+    			        <img class="arrow arrowLeft"src="<?= get_template_directory_uri(); ?>/assets/images/fléche-avant.svg" alt="fléche précédente" ></a>
     			        <?php endif; ?>
 						<div id="prev-miniature" class="miniature hide-miniature miniatureSize">
 							<?php echo get_the_post_thumbnail( $prev_post); ?>
@@ -87,7 +90,7 @@
     			        <?php
     			        if ( ! empty( $next_post )) : ?>
     			        <a href="<?php echo get_permalink( $next_post ); ?>">
-    			        <img class="arrow arrowRight"src="<?= get_template_directory_uri(); ?>/assets/images/fléche-suivant.svg"alt="fléche suivante" ></a>
+    			        <img class="arrow arrowRight"src="<?= get_template_directory_uri(); ?>/assets/images/fléche-suivant.svg" alt="fléche suivante" ></a>
     			        <?php endif; ?>
 						<div id='next-miniature' class="miniature hide-miniature miniatureSize">
 							<?php echo get_the_post_thumbnail( $next_post); ?>

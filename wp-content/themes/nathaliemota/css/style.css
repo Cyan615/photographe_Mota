@@ -327,10 +327,6 @@ html {
   margin: auto;
 }
 
-body {
-  border: 1px solid rgb(82, 242, 247);
-}
-
 a {
   font-size: 16px;
   font-family: "Space-mono";
@@ -368,7 +364,10 @@ img {
 
 .arrow {
   width: 25px;
+  height: 10px;
   padding: 0.2rem;
+  -o-object-fit: none;
+     object-fit: none;
 }
 .arrow:hover {
   transform: scale(1.2);
@@ -463,9 +462,6 @@ button:hover {
   }
 }
 @media (max-width: 799px) {
-  .catalogPhoto {
-    width: 100vw;
-  }
   .catalogPhoto .column-gallery {
     display: flex;
     flex-flow: column;
@@ -499,8 +495,8 @@ button:hover {
 }
 @media (max-width: 799px) {
   .photoCard {
-    width: 22.69rem;
-    height: 19.91rem;
+    width: 22.69rem !important;
+    height: 19.91rem !important;
   }
 }
 @media (max-width: 750px) {
@@ -530,12 +526,31 @@ button:hover {
     align-items: center;
   }
 }
+@media all and (max-width: 799px) {
+  .left-blockInfo {
+    width: 47% !important;
+  }
+}
+@media all and (max-width: 799px) {
+  .singlePhoto-content {
+    height: 28.4rem !important;
+  }
+}
 @media (min-width: 700px) {
   .img-container {
     max-width: 57vw !important;
   }
   .box__prevArrow, .box__nextArrow {
     bottom: 50% !important;
+  }
+}
+@media all and (max-width: 799px) {
+  .img-container {
+    width: auto !important;
+    height: auto !important;
+  }
+  .box__nextArrow, .box__prevArrow {
+    bottom: 6% !important;
   }
 }
 @media (max-width: 799px) {
@@ -547,6 +562,12 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 3.43rem !important;
+  }
+}
+@media all and (max-width: 799px) {
+  .modal-content__closebtn {
+    bottom: -25% !important;
+    right: 45% !important;
   }
 }
 .wpcf7 {
@@ -676,8 +697,10 @@ button:hover {
   }
   .active .navbar__menu {
     right: 0;
+    padding: 0;
   }
   .navbar {
+    position: relative;
     flex-direction: column;
     width: 100vw;
     align-content: end;
@@ -816,7 +839,8 @@ button:hover {
 }
 
 .photoCard {
-  width: calc(28rem + 9vw);
+  position: relative;
+  width: calc(28rem + 11.4vw);
   height: calc(31.4rem + 9vh);
 }
 .photoCard:hover .frame-Overlay {
@@ -947,9 +971,15 @@ button:hover {
 }
 .blockPhoto .img-container {
   padding: 0 2vw;
+  width: 36.7vw;
+  height: 71.3vh;
   max-width: 80vw;
   max-height: 70vh;
   margin: auto;
+}
+.blockPhoto .img-container .lightbox__image {
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
 }
 .blockPhoto .infoPhoto {
   display: flex;
@@ -975,8 +1005,11 @@ button:hover {
 }
 .single-postPhoto__photoInRight {
   width: 49%;
-  max-height: 144.6vh;
-  padding-left: 0.8rem;
+  max-height: 121.5vh;
+  margin-left: 1.5rem;
+}
+.single-postPhoto__photoInRight .singlePhoto-content {
+  height: 60rem;
 }
 .single-postPhoto__contactPhoto {
   display: flex;

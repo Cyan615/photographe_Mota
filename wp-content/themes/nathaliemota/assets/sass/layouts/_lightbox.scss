@@ -63,10 +63,14 @@
     
     & .img-container{
         padding: 0 2vw;
-        
+        width: 36.7vw;
+        height: 71.3vh;
         max-width: 80vw;
         max-height: 70vh;
         margin: auto;
+        & .lightbox__image{
+            object-fit: contain !important;
+        }
     }
     
     & .infoPhoto{

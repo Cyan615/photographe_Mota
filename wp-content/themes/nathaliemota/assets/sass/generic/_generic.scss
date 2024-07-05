@@ -5,9 +5,7 @@ html {
     max-width: 1440px;
     margin: auto;
 }
-body{
-    border: 1px solid rgb(82, 242, 247);
-}
+
 
 a{
     font-size: 16px;
@@ -39,7 +37,9 @@ img{
 }
 .arrow{
     width: 25px;
+    height: 10px;
     padding: 0.2rem;
+    object-fit: none;
     &:hover{
         transform: scale(1.2);
     }

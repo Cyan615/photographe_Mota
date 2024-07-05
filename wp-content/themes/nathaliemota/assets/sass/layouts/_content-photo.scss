@@ -1,6 +1,6 @@
 .photoCard{
-    
-    width: calc(28rem + 9vw);
+    position: relative;
+    width: calc(28rem + 11.4vw);
     height: calc(31.4rem + 9vh) ;  //35.36rem
     &:hover{
         .frame-Overlay{

@@ -8,9 +8,11 @@
     align-items: flex-end;
     &__photoInRight{  // Block photo à droite
         width: $width-block-2col;
-        max-height: 144.6vh;
-        padding-left: 0.8rem;
-        
+        max-height: 121.5vh;
+        margin-left: 1.5rem;
+        & .singlePhoto-content{
+            height: 60rem;
+        }
     }
     &__contactPhoto{   //Block de contacte du dessous
         display: flex;
