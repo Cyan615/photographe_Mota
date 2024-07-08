@@ -1,6 +1,6 @@
 <?php
 // -- Chemin url template --
-$template_uri = get_template_directory_uri();
+$template_uri = get_theme_file_uri();
 
 ?>
 

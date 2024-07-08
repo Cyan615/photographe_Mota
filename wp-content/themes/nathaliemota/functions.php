@@ -56,7 +56,7 @@ function mota_register_scripts(){
 function contact_modal_add($items){
     
     $contactItemMenu = '<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-20">
-    <a href="'.get_site_url().'/wp-content/theme/themenathaliemota/template-part/modalcontact.php/"  aria-current="page" itemprop="url">contact</a></li>';
+    <a href="'.get_site_url().'/wp-content/themes/nathaliemota/template-part/modalcontact.php/"  aria-current="page" itemprop="url">contact</a></li>';
     
     $items .= $contactItemMenu;
 

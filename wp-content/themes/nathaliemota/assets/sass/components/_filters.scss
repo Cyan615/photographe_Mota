@@ -1,0 +1,20 @@
+// *** habillage des filtres ****
+
+.filter{
+    appearance: none;
+    -webkit-appearance: none; /* Pour Safari */
+    -moz-appearance: none; /* Pour Firefox */
+    color: black;
+    border-radius: 8px;
+
+    border: 1.3px solid #B8BBC2;
+    background: url("../assets/images/icone-filtre.png") no-repeat right 10px center; /* Chemin vers l'image du chevron */
+    background-size: 16px 16px;
+    & option{
+        background-color: $white; /* Couleur de fond par défaut */
+        color: black; /* Couleur du texte par défaut */
+    }
+    & option[disabled]{
+        color: #B8BBC2; /* Couleur du texte pour les placeholders */
+    }
+}
