@@ -2,8 +2,8 @@
 
 	<div class="col1">
         <!-- Filtre par cathegorie -->
-        <select class="filter" name="filterCategorie"  id="filterCategorie">  
-            <option id="allCategory" value="allCat" disabled selected hidden>categorie</option>
+        <select class="filter" name="filterCategorie"  id="filterCategorie" onchange="highlightSelectedOption('filterCategorie')">  
+            <option id="allCategory" value="allCat"  selected >categorie</option>
             <?php
             $terms = get_terms('categorie'); ?>
             <?php foreach ($terms as $term) :
@@ -14,8 +14,8 @@
         
         <!-- Filtre par format -->
         
-        <select class="filter"  name="filterFormat"  id="filterFormat">
-            <option id="allFormat" value="allFor" disabled selected hidden>format</option>    
+        <select class="filter"  name="filterFormat"  id="filterFormat" onchange="highlightSelectedOption('filterFormat')">
+            <option id="allFormat" value="allFor" selected >format</option>    
             <?php  
             $terms = get_terms('format');
             foreach ($terms as $term) :
@@ -25,9 +25,9 @@
     </div>
     <div class="col2">
         <!-- filtre par date -->
-        <select name="filterDate" id="filterDate"  class="filter">
+        <select name="filterDate" id="filterDate"  class="filter" onchange="highlightSelectedOption('filterDate')">
                 
-            <option id="allOrder" value="all" disabled selected hidden>trié à partir</option>
+            <option id="allOrder" value="all" selected >trié à partir</option>
             <option id="descOrder" value="DESC">du plus récent</option>
             <option id="ascOrder" value="ASC">du plus ancien</option>
                 

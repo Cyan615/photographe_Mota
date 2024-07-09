@@ -366,8 +366,8 @@ img {
   width: 25px;
   height: 10px;
   padding: 0.2rem;
-  -o-object-fit: none;
-     object-fit: none;
+  -o-object-fit: none !important;
+     object-fit: none !important;
 }
 .arrow:hover {
   transform: scale(1.2);
@@ -657,8 +657,13 @@ button:hover {
   background-color: #ffffff; /* Couleur de fond par défaut */
   color: black; /* Couleur du texte par défaut */
 }
-.filter option[disabled] {
-  color: #B8BBC2; /* Couleur du texte pour les placeholders */
+
+.filter option:hover {
+  background-color: #ffd6d6;
+}
+
+.highlighted {
+  background-color: #e00000 !important;
 }
 
 .navbar {
@@ -1063,6 +1068,11 @@ button:hover {
 }
 .photo-navigation__prev-post:hover .hide-miniature {
   transform: scale(1);
+}
+
+.arrow {
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
 }
 
 .miniatureSize {

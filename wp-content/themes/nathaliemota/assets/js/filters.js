@@ -1,10 +1,18 @@
 console.log("Chargement filtres & bouton charger plus");
 
+function highlightSelectedOption(selectedId) {
+    const selectElement = document.getElementById(selectedId);
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+    selectedOption.classList.add('highlighted');
+};
+
+
+
 jQuery(document).ready(function($){
 
 
     // habillage des select pour les filtres
-    // $(".filter").select2();
+    
 
 // *** Filtres categorie, format et ordre */
 

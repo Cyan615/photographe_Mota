@@ -39,7 +39,7 @@ img{
     width: 25px;
     height: 10px;
     padding: 0.2rem;
-    object-fit: none;
+    object-fit: none !important;
     &:hover{
         transform: scale(1.2);
     }

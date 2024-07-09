@@ -1,7 +1,7 @@
 'use strict';
 console.log('OK modal js');
 
-    const modalBtnOpen = document.getElementById('menu-item-20');
+    const modalBtnOpen = document.querySelector('#menu-item-20 a');
     const modal = document.getElementById('contactModal');
     const btnOpen = document.querySelector('.open-popup');
 // console.log('modal '+ modal);
@@ -9,11 +9,14 @@ console.log('OK modal js');
     function openModal(e) {
         e.preventDefault();
 // condition pour pré-remplir le champ référence
-        var photoRef = btnOpen.getAttribute("data-reference");
-        if (photoRef && e.target === btnOpen) {
+        let photoRef = btnOpen.getAttribute("data-reference");
+        if (photoRef && e.target === modalBtnOpen) {
+
+            document.getElementById("refFormId").value = "";
+        } else { 
             document.getElementById("refFormId").value = photoRef;
         }
-        modal.style.display = "block" ;
+        modal.style.display = null ;
         
         //décalage pour l'éffet d'ouverture 
         setTimeout(() => {
@@ -28,15 +31,15 @@ console.log('OK modal js');
     }
     
     // Ouverture de la modale au clique sur le bouton Contact du menu 
-    
-        modalBtnOpen.addEventListener("click", function(){
-            modal.style.display = "block" ;
+    modalBtnOpen.addEventListener("click", openModal);
 
-            setTimeout(() => {
-                modal.classList.add('show');
-            }, 200);
-        });
-    
+        // modalBtnOpen.addEventListener("click", function(){
+        //     modal.style.display = null ;
+
+        //     setTimeout(() => {
+        //         modal.classList.add('show');
+        //     }, 200);
+        // });
 
   // Vérifier si le bouton "open-popup" est présent et le configurer
     if (btnOpen) {

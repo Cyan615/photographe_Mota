@@ -30,11 +30,12 @@ function mota_register_menu(){
 }
 
 // script css et JS
-function mota_register_scripts(){
-
+function mota_css_script(){
     // Déclarer le css compilé sass
     wp_enqueue_style('theme_style', get_template_directory_uri() . '/css/style.css');
+}
 
+function mota_register_scripts(){
     // Déclarer les fichiers js
     wp_enqueue_script('modal', get_template_directory_uri() . '/assets/js/modal.js', array('jquery'), '1.0.0', true);
 
@@ -77,6 +78,7 @@ function footer_item_add($items, $addr){
 // ******* ACTION *******
 add_action('after_setup_theme', 'mota_setup');
 add_action( 'init', 'mota_register_menu' );
+add_action('wp_enqueue_scripts', 'mota_css_script');
 add_action('wp_enqueue_scripts', 'mota_register_scripts');
 add_filter('wp_nav_menu_items', 'contact_modal_add', 10, 2);
 add_filter('wp_nav_menu_items', 'footer_item_add', 10, 2);

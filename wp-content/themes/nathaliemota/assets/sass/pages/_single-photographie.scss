@@ -49,7 +49,11 @@
     }
     &__prev-post:hover .hide-miniature{
         transform: scale(1);
+        
     }
+}
+.arrow{
+    object-fit: contain !important;
 }
 .miniatureSize {
     width: 81px;

@@ -14,7 +14,11 @@
         background-color: $white; /* Couleur de fond par défaut */
         color: black; /* Couleur du texte par défaut */
     }
-    & option[disabled]{
-        color: #B8BBC2; /* Couleur du texte pour les placeholders */
-    }
+    
 }
+.filter option:hover{
+    background-color: $red3;
+}
+.highlighted {
+    background-color: $red !important;
+  }
