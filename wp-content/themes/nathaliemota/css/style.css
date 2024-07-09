@@ -858,8 +858,8 @@ button:hover {
 
 .photoCard {
   position: relative;
-  width: calc(28rem + 11.4vw);
-  height: calc(31.4rem + 9vh);
+  width: calc(28rem + 9vw);
+  height: calc(29.5rem + 9vh);
 }
 .photoCard:hover .frame-Overlay {
   display: flex;

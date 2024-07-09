@@ -1,6 +1,11 @@
 console.log("Chargement filtres & bouton charger plus");
 
 jQuery(document).ready(function($){
+
+
+    // habillage des select pour les filtres
+    // $(".filter").select2();
+
 // *** Filtres categorie, format et ordre */
 
     function collect_photo() {

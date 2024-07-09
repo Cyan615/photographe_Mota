@@ -31,7 +31,11 @@ function mota_register_menu(){
 
 // script css et JS
 function mota_register_scripts(){
-    // Déclarer le js
+
+    // Déclarer le css compilé sass
+    wp_enqueue_style('theme_style', get_template_directory_uri() . '/css/style.css');
+
+    // Déclarer les fichiers js
     wp_enqueue_script('modal', get_template_directory_uri() . '/assets/js/modal.js', array('jquery'), '1.0.0', true);
 
     wp_enqueue_script('load-more', get_template_directory_uri() . '/assets/js/load-more.js', array('jquery'), '1.0.0', true);
@@ -39,6 +43,8 @@ function mota_register_scripts(){
     wp_enqueue_script('filters', get_template_directory_uri() . '/assets/js/filters.js', array('jquery'), '1.0.0', true);
 
     wp_enqueue_script('lightbox', get_template_directory_uri() . '/assets/js/lightbox.js', array('jquery'), '1.0.0', true);
+    
+    
 
     // url pour requète Ajax
     $url = admin_url('admin-ajax.php');
@@ -48,8 +54,7 @@ function mota_register_scripts(){
     wp_enqueue_script('jquery');
 
 
-    // Déclarer le css compilé sass
-    wp_enqueue_style('theme_style', get_template_directory_uri() . '/css/style.css');
+    
 }
 
 // affichage du lien 'Contact' dans le menu header

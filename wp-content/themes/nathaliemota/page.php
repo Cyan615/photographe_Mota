@@ -11,7 +11,7 @@ get_header();
 ?>
 <main id="primary" class="site-main container">
 	<section class="banner">
-    	<img class="banner__img" src="<?php echo get_theme_file_uri().'./assets/images/nathalie-0.jpeg'; ?>" alt="">
+    	<img class="banner__img" src="<?php echo get_theme_file_uri().'/assets/images/nathalie.webp'; ?>" alt="">
     	<p class="banner__slogan hero-slogan">photographe event</p>
 
 	</section>
